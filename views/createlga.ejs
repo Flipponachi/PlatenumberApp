@@ -1,0 +1,19 @@
+<% include ./partials/header %>
+
+<style type="text/css">
+  .container{
+  margin-top: 7.0em;
+}
+</style>
+
+<h3>Create Local Government</h3>
+<form method="POST" action="/lga/createlga">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Local Government Name</label>
+          <input type="text" name="lga[name]" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="LGA Name" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Create LGA</button>
+</form>
+
+<% include ./partials/footer %>

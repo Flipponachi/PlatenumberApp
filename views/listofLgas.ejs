@@ -1,0 +1,11 @@
+<% include ./partials/header %>
+
+<h3>List Of Local Governmets</h3>
+<ul class="list-group">
+    <% Lgas.forEach((lga) => { %>
+        <li class="list-group-item"><%=lga.name %></li>
+        
+    <% }); %>
+ </ul>
+
+<% include ./partials/footer %>

@@ -1,11 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+<% include ./partials/header %>
+
+<div class="jumbotron mt-2">
+        <h1 class="display-4">Welcome to LGA Platenumber records!</h1>
+        <p class="lead">Records of LGA With platenumbers</p>
+        <hr class="my-4">
+        <div class="dropdown mt-5" >
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Local Governments
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="/lga">List Of LGAs</a>
+                  <a class="dropdown-item" href="/lga/createlga">Create LGA</a>
+                 
+                </div>
+        </div>
+</div>
+
+
+
+<% include ./partials/footer %>
