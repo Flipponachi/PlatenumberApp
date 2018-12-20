@@ -4,6 +4,16 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+//Database setup
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://127.0.0.1:27017/platenumas')
+        .then(() => {
+            console.log("connection successful");
+        })
+        .catch(() => {
+            console.log("Connection not established")
+        });
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
