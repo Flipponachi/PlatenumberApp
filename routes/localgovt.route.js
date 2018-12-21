@@ -30,7 +30,7 @@ lgaRouter.post('/createlga', (req, res) => {
   
   )
   .catch((err) => {
-    res.render('/lga/createlga')})
+    res.redirect('/lga/createlga')})
 })
 
 module.exports = lgaRouter;

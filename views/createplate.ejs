@@ -1,0 +1,31 @@
+<% include ./partials/header %>
+
+<style type="text/css">
+  .container{
+  margin-top: 7.0em;
+}
+</style>
+
+<h3>Create Plate Number</h3>
+<form method="POST" action="/plates/createplates">
+
+    <select class="custom-select">
+            <option selected>Select Local Govt</option>
+            
+            <% lgas.forEach(function(lga) => {%>
+            <option value="<%=lgas._id%>"><%=lgas.name %></option>
+            
+            <% )} %>
+    </select>
+
+        <div class="form-group">
+          <label >Number of Plates</label>
+          <input type="number" name="lga[amount]" class="form-control" required>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Create Plates</button>
+</form>
+<script>
+ console.log("<%= lgas%>")
+</script>
+<% include ./partials/footer %>
