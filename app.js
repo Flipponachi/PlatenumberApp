@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 //Database setup
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/platenumas')
+mongoose.connect('mongodb://127.0.0.1:27017/frsc')
         .then(() => {
             console.log("connection successful");
         })

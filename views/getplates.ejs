@@ -1,0 +1,22 @@
+<% include ./partials/header %>
+
+<style type="text/css">
+  .container{
+  margin-top: 7.0em;
+}
+</style>
+
+<h3>Get Plates for LGA</h3>
+<form method="POST" action="/plate/getplates">
+
+    <select class="custom-select" name="plates[lgaId]" required>
+            <option selected>Select Local Govt</option>
+            <% lgas.forEach(function (lga){ %>
+
+            <option value="<%= lga._id%>" ><%= lga.name%></option>
+            <% }) %>                     
+    </select>
+
+    <button class="mt-2 btn btn-primary">Get Plates</button>
+</form>
+<% include ./partials/footer %>

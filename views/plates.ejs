@@ -1,0 +1,21 @@
+<% include ./partials/header %>
+
+<style type="text/css">
+  .container{
+  margin-top: 7.0em;
+}
+</style>
+
+
+<h3 class="mb-3">Plates Generated</h3>
+<% plates.forEach((plate) => { %>
+<ul class="list-group">
+  <li class="list-group-item"><%= plate.number%></li>
+  
+</ul>
+
+
+<% } ) %>
+
+
+<% include ./partials/footer %>
