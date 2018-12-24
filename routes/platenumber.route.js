@@ -57,13 +57,13 @@ LgaModel.findById(req.body.plates.lgaId)
 })
 .then((plateDetails) => {
     
-    var lgaName = plateDetails[1];
+    //var lgaName = plateDetails[1];
    
        //Check if any record in the data base first for the platenumber
         PlateNumberModel.findOne().sort({number: -1})
         .then((data) => {
            
-            console.log("Last record " + data);
+            //console.log("Last record " + data);
             //Amount of plates requested by user
             var noOfPlates = req.body.plates.amount;
 
